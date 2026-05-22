@@ -26,11 +26,11 @@ export const Route = createFileRoute("/")({
 });
 
 const kpis = [
-  { label: "Samples today", value: "1,284", delta: "+12.4%", icon: TestTubeDiagonal, tone: "teal" },
-  { label: "Avg TAT", value: "2h 41m", delta: "-8m", icon: Clock, tone: "mint" },
-  { label: "QC pass rate", value: "99.2%", delta: "+0.3%", icon: ShieldCheck, tone: "success" },
-  { label: "Pending reports", value: "37", delta: "-14", icon: Activity, tone: "warning" },
-] as const;
+  { label: "Samples today", value: "1,284", delta: "+12.4%", icon: TestTubeDiagonal, tone: "bg-teal/15 text-teal" },
+  { label: "Avg TAT", value: "2h 41m", delta: "-8m", icon: Clock, tone: "bg-mint/20 text-primary" },
+  { label: "QC pass rate", value: "99.2%", delta: "+0.3%", icon: ShieldCheck, tone: "bg-success/15 text-success" },
+  { label: "Pending reports", value: "37", delta: "-14", icon: Activity, tone: "bg-warning/15 text-warning" },
+];
 
 const queue = [
   { id: "ACC-9821", patient: "Amelia Hart", test: "CBC + Differential", priority: "Urgent", status: "Running", time: "12m" },
@@ -69,7 +69,7 @@ function DashboardPage() {
               <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 {k.label}
               </span>
-              <div className={`flex h-8 w-8 items-center justify-center rounded-lg bg-${k.tone === "warning" ? "warning" : k.tone === "success" ? "success" : k.tone}/15 text-${k.tone === "warning" ? "warning" : k.tone === "success" ? "success" : k.tone}`}>
+              <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${k.tone}`}>
                 <k.icon className="h-4 w-4" />
               </div>
             </div>
