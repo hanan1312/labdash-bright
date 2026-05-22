@@ -75,11 +75,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Lovable App" },
       { name: "description", content: "Lovable Generated Project" },
       { name: "author", content: "Helix Lab" },
-      { property: "og:title", content: "Helix Lab — Diagnostics OS" },
-      { property: "og:description", content: "Modern medical lab management platform." },
+      { property: "og:title", content: "Lovable App" },
+      { property: "og:description", content: "Lovable Generated Project" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:description", content: "Lovable Generated Project" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2b2ac528-f813-41bc-8efd-86994e499dda/id-preview-99163b38--dffebaae-ce57-49a8-bb9e-1ff5accfbeda.lovable.app-1779408990119.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2b2ac528-f813-41bc-8efd-86994e499dda/id-preview-99163b38--dffebaae-ce57-49a8-bb9e-1ff5accfbeda.lovable.app-1779408990119.png" },
     ],
     links: [
       {
